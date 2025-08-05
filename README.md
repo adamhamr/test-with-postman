@@ -5,7 +5,7 @@ A project that contains several bugs. A beginner tester can make use of it to te
 
 ### 1. Install Python
 
-Go to the official Python website: [](https://www.python.org/downloads/)
+Go to the official Python website: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
 Download Python installer.
 
@@ -24,13 +24,15 @@ Open a terminal (Command Prompt or PowerShell) and run:
 cd rest-api-test
 ```
 
-This enters a new folder for your project.
+This enters the folder for your project.
 
 ### 3. Create a Virtual Environment
 
 A virtual environment allows you to isolate the dependencies for this project:
 
-`python -m venv venv`
+```
+python -m venv venv
+```
 
 To activate it:
 
@@ -45,17 +47,21 @@ You should now see something like `(venv)` at the beginning of your terminal pro
 
 Install the required Python packages:
 
-`pip install fastapi uvicorn transformers`
+```
+pip install fastapi uvicorn transformers
+```
 
 ### 5. Check the API Code
 
-Make sure, there is main.py file inside the rest-api-test folder.
+Make sure, there is `main.py` file inside the `rest-api-test` folder.
 
 ### 6. Run the API Server
 
 Start the server by running:
 
-`uvicorn main:app –reload`
+```
+uvicorn main:app –reload
+```
 
 What this command does:
 
@@ -72,7 +78,7 @@ If you see both lines, especially `Application startup complete`, the server is 
 
 ### 7. Install Postman
 
-Go to [](https://www.postman.com/downloads/)
+Go to [https://www.postman.com/downloads/](https://www.postman.com/downloads/)
 
 Download and install the latest version for your operating system.
 
@@ -99,7 +105,7 @@ In the request window:
 }
 ```
 
-Click “Send”
+Click `Send`
 
 You should receive a JSON response similar to:
 
@@ -108,7 +114,6 @@ You should receive a JSON response similar to:
   "suggestion": "Hi Gabriella! Hope you're balancing work and fun! Also, red is a beautiful color!",
   "token_count": 18
 }
-
 ```
 
 ### 9. Check the Log File
@@ -117,7 +122,9 @@ While the server is running, logs are written to a file named suggestion_api.log
 
 To view the logs:
 
-`notepad suggestion_api.log`
+```
+notepad suggestion_api.log
+```
 
 Look for details such as incoming requests, responses, and any intentional or unexpected errors.
 
