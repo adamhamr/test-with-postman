@@ -1,9 +1,9 @@
 # test-with-postman
 A project that contains several bugs. A beginner tester can make use of it to test out the project and report the bugs.
 
-### Step-by-Step Guide: How to Test the REST API Using Postman (Beginner-Friendly)
+## Step-by-Step Guide: How to Test the REST API Using Postman (Beginner-Friendly)
 
-1. Install Python
+### 1. Install Python
 
 Go to the official Python website: [](https://www.python.org/downloads/)
 
@@ -17,7 +17,7 @@ Run the installer and:
 
 Finish the installation
 
-2. Open the Project Folder
+### 2. Open the Project Folder
 
 Open a terminal (Command Prompt or PowerShell) and run:
 ```
@@ -26,7 +26,7 @@ cd rest-api-test
 
 This enters a new folder for your project.
 
-3. Create a Virtual Environment
+### 3. Create a Virtual Environment
 
 A virtual environment allows you to isolate the dependencies for this project:
 
@@ -41,17 +41,17 @@ To activate it:
 
 You should now see something like `(venv)` at the beginning of your terminal prompt.
 
-4. Install Project Dependencies
+### 4. Install Project Dependencies
 
 Install the required Python packages:
 
 `pip install fastapi uvicorn transformers`
 
-5. Check the API Code
+### 5. Check the API Code
 
 Make sure, there is main.py file inside the rest-api-test folder.
 
-6. Run the API Server
+### 6. Run the API Server
 
 Start the server by running:
 
@@ -70,13 +70,13 @@ INFO:     Application startup complete.
 
 If you see both lines, especially `Application startup complete`, the server is running correctly.
 
-7. Install Postman
+### 7. Install Postman
 
 Go to [](https://www.postman.com/downloads/)
 
 Download and install the latest version for your operating system.
 
-8. Open Postman after installation.
+### 8. Open Postman after installation.
 
 Send a Request Using Postman
 
@@ -111,7 +111,7 @@ You should receive a JSON response similar to:
 
 ```
 
-9. Check the Log File
+### 9. Check the Log File
 
 While the server is running, logs are written to a file named suggestion_api.log.
 
@@ -121,7 +121,7 @@ To view the logs:
 
 Look for details such as incoming requests, responses, and any intentional or unexpected errors.
 
-10. Stop the Server
+### 10. Stop the Server
 
 When you're done, go back to the terminal running Uvicorn and press:
 
