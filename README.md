@@ -60,7 +60,7 @@ Make sure, there is `main.py` file inside the `rest-api-test` folder.
 Start the server by running:
 
 ```
-uvicorn main:app –reload
+uvicorn main:app --reload
 ```
 
 What this command does:
