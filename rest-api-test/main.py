@@ -27,8 +27,8 @@ call_count = 0
 counter_lock = Lock()
 
 # --- BUG 1: Python Version Check Block ---
-if sys.version_info >= (3, 12):
-    raise RuntimeError("This server only supports Python 3.12 or lower.")  # --- Bug 1
+# if sys.version_info >= (3, 12):
+#     raise RuntimeError("This server only supports Python 3.12 or lower.")  # --- Bug 1
 
 # --- Central Color List ---
 COMMON_COLORS = [
@@ -83,13 +83,13 @@ def suggest(data: InputData, request: Request):
     if data.favorite_color:
         suggestion += f" Also, {data.favorite_color} is a beautiful color!"
 
-    # --- BUG 4: Every 5th call returns -999 token count ---
-    if current_call % 5 == 0:
-        logger.warning(f"Intentional token bug #1 injected on call #{current_call}")
-        return {
-            "suggestion": suggestion,
-            "token_count": -999
-        }  # --- Bug 4
+    # # --- BUG 4: Every 5th call returns -999 token count ---
+    # if current_call % 5 == 0:
+    #     logger.warning(f"Intentional token bug #1 injected on call #{current_call}")
+    #     return {
+    #         "suggestion": suggestion,
+    #         "token_count": -999
+    #     }  # --- Bug 4
 
     # --- BUG 5: On 7th call, return negative token count (flipped sign) ---
     if current_call == 7:
