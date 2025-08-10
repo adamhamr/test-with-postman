@@ -67,8 +67,8 @@ def suggest(data: InputData, request: Request):
 
     name_clean = data.name.strip()
 
-    # --- BUG 3: Encoding the name (instead of keeping it string) ---
-    name_clean = tokenizer.convert_ids_to_tokens(tokenizer.encode(name_clean, add_special_tokens=False))  # --- Bug 3
+    # # --- BUG 3: Encoding the name (instead of keeping it string) ---
+    # name_clean = tokenizer.convert_ids_to_tokens(tokenizer.encode(name_clean, add_special_tokens=False))  # --- Bug 3
 
     suggestion = f"Hi {name_clean}!"
 
