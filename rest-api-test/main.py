@@ -32,13 +32,13 @@ counter_lock = Lock()
 
 # --- Central Color List ---
 COMMON_COLORS = [
-    'red', 'blue', 'green', 'yellow', 'black', 'white', 'gray', 'orange',
+    'red', 'blue', 'green', 'yellow', 'black', 'white', 'gray', 'grey', 'orange',
     'pink', 'purple', 'brown', 'cyan', 'magenta', 'lime', 'indigo',
     'gold', 'silver', 'beige'
 ]
 
-# --- BUG 2: Removing second color from COMMON_COLORS ---
-del COMMON_COLORS[1]  # --- Bug 2
+# # --- BUG 2: Removing second color from COMMON_COLORS ---
+# del COMMON_COLORS[1]  # --- Bug 2
 
 # --- Schema ---
 class InputData(BaseModel):
