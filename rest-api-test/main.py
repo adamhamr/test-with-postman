@@ -91,15 +91,15 @@ def suggest(data: InputData, request: Request):
     #         "token_count": -999
     #     }  # --- Bug 4
 
-    # --- BUG 5: On 7th call, return negative token count (flipped sign) ---
-    if current_call == 7:
-        tokens = tokenizer.encode(suggestion, add_special_tokens=False)
-        token_count = -len(tokens)
-        logger.error(f"Intentional token bug #2 (flipped sign) injected on call #{current_call}")
-        return {
-            "suggestion": suggestion,
-            "token_count": token_count
-        }  # --- Bug 5
+    # # --- BUG 5: On 7th call, return negative token count (flipped sign) ---
+    # if current_call == 7:
+    #     tokens = tokenizer.encode(suggestion, add_special_tokens=False)
+    #     token_count = -len(tokens)
+    #     logger.error(f"Intentional token bug #2 (flipped sign) injected on call #{current_call}")
+    #     return {
+    #         "suggestion": suggestion,
+    #         "token_count": token_count
+    #     }  # --- Bug 5
 
     # --- Correct Behavior ---
     tokens = tokenizer.encode(suggestion, add_special_tokens=False)
